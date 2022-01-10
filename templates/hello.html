@@ -1,0 +1,18 @@
+{% extends 'home.html'%}
+
+{% block content%}
+    <h1>Hello</h1>
+    <span>Request Method = {{request_method}}</span>
+
+    <form method="post" action = "/">
+        <input type="text" name="name" id="name_id" placeholder="Name">
+        <input type="submit">
+    </form>
+
+    <hr>
+    {% for i in todo %}
+        <ul>
+            {{ i.content }}
+        </ul>
+    {% endfor %}
+{% endblock content%}
